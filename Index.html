@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rain Mod Menu</title>
+    <style>
+        body {
+            font-family: 'Arial Black', Gadget, sans-serif;
+            background-color: #1c1c1c;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: #333;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff5733;
+            text-shadow: 2px 2px 5px #000;
+        }
+        .version-info {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #bbb;
+        }
+        .download-link,
+        .install-instructions {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #fff;
+        }
+        .download-link a {
+            color: #ff5733;
+            text-decoration: underline;
+        }
+        .options {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .option {
+            background: #444;
+            padding: 20px;
+            border: 2px solid #555;
+            border-radius: 10px;
+            width: 250px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .option:hover {
+            transform: scale(1.1);
+            background-color: #555;
+        }
+        .option h2 {
+            font-size: 2em;
+            margin: 0 0 10px;
+            color: #ffcc00;
+            text-shadow: 1px 1px 3px #000;
+        }
+        .option p {
+            margin: 0 0 20px;
+            color: #bbb;
+        }
+        .option button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #0D6EFD; /* Changed color to a shade of blue */
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            text-shadow: 1px 1px 3px #000;
+        }
+        .option button:hover {
+            background: #0B5ED7; /* Darker shade of blue */
+        }
+        .instructions-list {
+            text-align: left;
+            margin-top: 10px;
+        }
+        .instructions-list li {
+            margin-bottom: 10px;
+        }
+        .tab-content {
+            display: none;
+            margin-top: 10px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rain Mod Menu</h1>
+        <div class="version-info">
+            Works on GTA V Online Version 1.89
+        </div>
+        <div class="download-link">
+            <p>Download the menu <a href="Rain.rar" download>here</a>.</p>
+        </div>
+        <div class="install-instructions">
+            <button onclick="showInstructions('install')">How to Install</button>
+            <div id="install" class="tab-content">
+                <ul class="instructions-list">
+                    <li>Put the script in the scripts folder of YimMenu.</li>
+                    <li>You can find the YimMenu folder by opening the RUN window (Windows key + R) and typing %appdata% and pressing enter.</li>
+                    <li>Then look for the YimMenu -> scripts folder and put the script in there.</li>
+                    <li>OR you can open YimMenu, go to Settings -> Lua Scripts and click on the Open Lua Scripts Folder button. Then put the script in there.</li>
+                    <li>Launch GTA V and open YimMenu if you haven't already.</li>
+                    <li>Click on the Reload All button if the script does not appear.</li>
+                </ul>
+            </div>
+            <button onclick="showInstructions('download')">Where to YimMenu Download</button>
+            <div id="download" class="tab-content">
+                <p>Download the mod menu at <a href="https://yim.gta.menu/" target="_blank">this website</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showInstructions(tabId) {
+            var tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
