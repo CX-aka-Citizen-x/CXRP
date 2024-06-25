@@ -33,12 +33,14 @@
             color: #bbb;
         }
         .download-link,
-        .install-instructions {
+        .install-instructions,
+        .forum-link {
             margin-top: 20px;
             font-size: 1.2em;
             color: #fff;
         }
-        .download-link a {
+        .download-link a,
+        .forum-link a {
             color: #ff5733;
             text-decoration: underline;
         }
@@ -111,21 +113,31 @@
             <button onclick="showInstructions('install')">How to Install</button>
             <div id="install" class="tab-content">
                 <ul class="instructions-list">
-                    <li>install script hook V https://www.dev-c.com/gtav/scripthookv/</li>
-                    <li>Installation
-1. Copy ScriptHookV.dll to the game's main folder, i.e. where GTA5.exe is located.
-2. In order to load asi plugins you need to have asi loader installed, you can download it separately or use the latest version that comes with this distrib (dinput8.dll). You must delete previous asi loader version (dsound.dll) if you have one installed.
-3. there will be a native trainer.ASI do not in drag that in.
-</li>
-                    <li>Script Hook V .NET https://github.com/scripthookvdotnet/scripthookvdotnet#readme</li>
-                    <li>then download the menu </li>
-                    <li>whenever you drag everything into your GTA folder you're going to want to create a scripts folder in your GTA folder and that's where you going to put the rain.dll in</li>
-                    <li>F5 to open the menu the menu is constantly being updated to make sure to always check for updates join the Discord for support and announcements about the menu https://discord.gg/pR2C49hPp2 </li>
+                    <li>Install Script Hook V: <a href="https://www.dev-c.com/gtav/scripthookv/" target="_blank">https://www.dev-c.com/gtav/scripthookv/</a></li>
+                    <li>Installation:
+                        <ol>
+                            <li>Copy ScriptHookV.dll to the game's main folder, i.e. where GTA5.exe is located.</li>
+                            <li>In order to load ASI plugins, you need to have an ASI loader installed. You can download it separately or use the latest version that comes with this distribution (dinput8.dll). You must delete any previous ASI loader version (dsound.dll) if you have one installed.</li>
+                            <li>There will be a native trainer.ASI; do not drag that in.</li>
+                        </ol>
+                    </li>
+                    <li>Install Script Hook V .NET: <a href="https://github.com/scripthookvdotnet/scripthookvdotnet#readme" target="_blank">https://github.com/scripthookvdotnet/scripthookvdotnet#readme</a></li>
+                    <li>Download the menu.</li>
+                    <li>Drag everything into your GTA folder. Create a 'scripts' folder in your GTA folder and put the rain.dll in it.</li>
+                    <li>Press F5 to open the menu. The menu is constantly being updated, so make sure to always check for updates. Join the Discord for support and announcements about the menu: <a href="https://discord.gg/pR2C49hPp2" target="_blank">https://discord.gg/pR2C49hPp2</a></li>
                 </ul>
             </div>
-            <button onclick="showInstructions('download')">the Discord server </button>
+        </div>
+        <div class="forum-link">
+            <button onclick="showInstructions('forum')">Forum Instructions</button>
+            <div id="forum" class="tab-content">
+                <p>Join the discussion on our forums. Share your experiences, ask questions, and get help from other users: <a href="https://forums.example.com" target="_blank">https://forums.example.com</a></p>
+            </div>
+        </div>
+        <div class="discord-link">
+            <button onclick="showInstructions('download')">Join the Discord server</button>
             <div id="download" class="tab-content">
-                <p>Download the mod menu at <a href="https://discord.gg/pR2C49hPp2" target="_blank">this website</a>.</p>
+                <p>Join our Discord server for the latest updates and support: <a href="https://discord.gg/pR2C49hPp2" target="_blank">https://discord.gg/pR2C49hPp2</a></p>
             </div>
         </div>
     </div>
